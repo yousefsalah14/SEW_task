@@ -16,10 +16,7 @@ body{
     width: 100%;
 
 }
-.nav{
-    position: fixed;
-    width: 100%;
-}
+
 .header{
      display: flex;
      flex-wrap: nowrap;
@@ -170,13 +167,126 @@ img{
   .first{
     display: grid;
     width: auto;
-    background-color: red;
+    align-content:space-between;
+ 
   }
   .wapper .slide{
     width: 70%;
     height: 100%;
+    overflow: hidden;
   }
   .slide .image{
-    width: 100%;
-    height: 80%;
+    width: 60%;
+    height: 40%;
   }
+  .slide .img-data{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+  
+  }
+
+  .img-data ,.text{
+    font-size: medium;
+    font-weight: 400;
+  }
+  .button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: white;
+    color: ghostwhite;
+    text-decoration: none;
+   }
+   
+   .button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+   }
+   
+   .button:hover span {
+    color: black;
+   }
+   
+   .button::before,
+   .button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+   }
+   
+   
+  .button::before {
+    content: "";
+    background: red;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    
+   }
+   
+   .button:hover::before {
+    transform: translate3d(100%, 0, 0);
+   }
+   
+
+
+   .projects .contant {
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: white;
+    
+    border: 1px solid white;
+    min-height: 14em;
+    width: 80%;
+    transition: 0.8s ease;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+
+.project-img img {
+    width: 100%;
+}
+
+.project-card:hover .project-img {
+    opacity: 0.9;
+}
+
+.project-info {
+    padding: 1em;
+    opacity: 0.9;
+}
+
+.cat {
+    font-size: 0.8 em;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
